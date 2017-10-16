@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>новостной сайт</title>
+	<link rel="stylesheet" href="/template/css/style.css">
+	<link rel="shortcut icon" type="/template/image/x-icon" href="/template/img/favicon.ico">
+	<?php if(isset($header)) echo $header;?>
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+			<p>
+				<h1>
+					Сайтик
+				</h1>
+			</p>
+			<div class="menu-wrapper">
+				<div class="menu"><a href="/main/index">Главная</a></div>
+				<div class="menu"><a href="/gallery/index">Галерея</a></div>
+				<div class="menu"><a href="/news/list">Новости</a></div>
+				<div class="menu"><a href="/news/main">Основные новости</a></div>
+				<div class="menu"><a href="/news/nonmain">Остальные новости</a></div>
+			</div>
+		</header>
+		<div class="content">
+			<div class="content__main">
+				<?php echo $data;?>
+			</div>
+			<div class="content__addit">
+			</div>
+		</div>
+		<footer>
+			Все представлено в ознакомительный целях
+		</footer>
+	</div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+15/10/2017  10:09:18 - request page /news/1 not found 
+15/10/2017  10:09:18 - action Controllernewspage->action1 not exists 
+15/10/2017  10:10:24 - news and 1 
+15/10/2017  10:10:24 - request page /news/1 not found 
+15/10/2017  10:10:24 - action Controllernewspage->action1 not exists 
+15/10/2017  10:10:24 - 404 and index 
+15/10/2017  10:10:24 - request page /404 not found 
+15/10/2017  10:10:24 - controller file E:\projects\deep_fullstack\pset0\task1/controller/404page.php not exists 
+15/10/2017  10:10:24 - 404 and index 
+15/10/2017  10:10:24 - request page /404 not found 
+15/10/2017  10:10:24 - controller file E:\projects\deep_fullstack\pset0\task1/controller/404page.php not exists 
+15/10/2017  10:10:24 - 404 and index 
+15/10/2017  10:10:24 - request page /404 not found 
+15/10/2017  10:10:24 - controller file E:\projects\deep_fullstack\pset0\task1/controller/404page.php not exists 
+15/10/2017  10:10:24 - 404 and index 
+15/10/2017  10:10:24 - request page /404 not found 
+15/10/2017  10:10:24 - controller file E:\projects\deep_fullstack\pset0\task1/controller/404page.php not exists 
+15/10/2017  10:10:25 - 404 and index 
+15/10/2017  10:10:25 - request page /404 not found 
+15/10/2017  10:10:25 - controller file E:\projects\deep_fullstack\pset0\task1/controller/404page.php not exists 
+15/10/2017  10:10:25 - 404 and index 
+15/10/2017  10:10:25 - request page /404 not found 
+15/10/2017  10:10:25 - controller file E:\projects\deep_fullstack\pset0\task1/controller/404page.php not exists 
+15/10/2017  10:10:25 - 404 and index 
+15/10/2017  10:10:25 - request page /404 not found 
+15/10/2017  10:10:25 - controller file E:\projects\deep_fullstack\pset0\task1/controller/404page.php not exists 
+15/10/2017  10:10:25 - 404 and index 
+15/10/2017  10:10:25 - request page /404 not found 
+15/10/2017  10:10:25 - controller file E:\projects\deep_fullstack\pset0\task1/controller/404page.php not exists 
+15/10/2017  10:10:25 - 404 and index 
+15/10/2017  10:10:25 - request page /404 not found 
+15/10/2017  10:10:25 - controller file E:\projects\deep_fullstack\pset0\task1/controller/404page.php not exists 
+15/10/2017  10:10:25 - 404 and index 
+15/10/2017  10:10:25 - request page /404 not found 
+15/10/2017  10:10:25 - controller file E:\projects\deep_fullstack\pset0\task1/controller/404page.php not exists 
+15/10/2017  10:10:26 - 404 and index 
+15/10/2017  10:10:26 - request page /404 not found 
+15/10/2017  10:10:26 - controller file E:\projects\deep_fullstack\pset0\task1/controller/404page.php not exists 
+15/10/2017  10:10:26 - 404 and index 
+15/10/2017  10:10:26 - request page /404 not found 
+15/10/2017  10:10:26 - controller file E:\projects\deep_fullstack\pset0\task1/controller/404page.php not exists 
+15/10/2017  10:10:26 - 404 and index 
+15/10/2017  10:10:26 - request page /404 not found 
+15/10/2017  10:10:26 - controller file E:\projects\deep_fullstack\pset0\task1/controller/404page.php not exists 
+15/10/2017  10:10:26 - 404 and index 
+15/10/2017  10:10:26 - request page /404 not found 
+15/10/2017  10:10:26 - controller file E:\projects\deep_fullstack\pset0\task1/controller/404page.php not exists 
+15/10/2017  10:10:26 - 404 and index 
+15/10/2017  10:10:26 - request page /404 not found 
+15/10/2017  10:10:26 - controller file E:\projects\deep_fullstack\pset0\task1/controller/404page.php not exists 
+15/10/2017  10:10:26 - 404 and index 
+15/10/2017  10:10:26 - controller file E:\projects\deep_fullstack\pset0\task1/controller/404page.php not exists 
+15/10/2017  10:12:07 - news and 1 
+15/10/2017  10:12:07 - request page /news/1 not found 
+15/10/2017  10:12:07 - action Controllernewspage->action1 not exists 
+15/10/2017  10:12:07 - 404 and index 
+15/10/2017  10:12:07 - request page /404 not found 
+15/10/2017  10:12:07 - controller file E:\projects\deep_fullstack\pset0\task1/controller/404page.php not exists 
+15/10/2017  10:12:07 - 404 and index 
+15/10/2017  10:12:07 - request page /404 not found 
+15/10/2017  10:12:07 - controller file E:\projects\deep_fullstack\pset0\task1/controller/404page.php not exists 
+15/10/2017  10:12:07 - 404 and index 
+15/10/2017  10:12:07 - request page /404 not found 
+15/10/2017  10:12:07 - controller file E:\projects\deep_fullstack\pset0\task1/controller/404page.php not exists 
+15/10/2017  10:12:08 - 404 and index 
+15/10/2017  10:12:08 - request page /404 not found 
+15/10/2017  10:12:08 - controller file E:\projects\deep_fullstack\pset0\task1/controller/404page.php not exists 
+15/10/2017  10:12:08 - 404 and index 
+15/10/2017  10:12:08 - request page /404 not found 
+15/10/2017  10:12:08 - controller file E:\projects\deep_fullstack\pset0\task1/controller/404page.php not exists 
+15/10/2017  10:12:08 - 404 and index 
+15/10/2017  10:12:08 - request page /404 not found 
+15/10/2017  10:12:08 - controller file E:\projects\deep_fullstack\pset0\task1/controller/404page.php not exists 
+15/10/2017  10:12:08 - 404 and index 
+15/10/2017  10:12:08 - request page /404 not found 
+15/10/2017  10:12:08 - controller file E:\projects\deep_fullstack\pset0\task1/controller/404page.php not exists 
+15/10/2017  10:12:08 - 404 and index 
+15/10/2017  10:12:08 - request page /404 not found 
+15/10/2017  10:12:08 - controller file E:\projects\deep_fullstack\pset0\task1/controller/404page.php not exists 
+15/10/2017  10:12:08 - 404 and index 
+15/10/2017  10:12:08 - request page /404 not found 
+15/10/2017  10:12:09 - 404 and index 
+15/10/2017  10:12:09 - request page /404 not found 
+15/10/2017  10:12:09 - controller file E:\projects\deep_fullstack\pset0\task1/controller/404page.php not exists 
+15/10/2017  10:12:09 - 404 and index 
+15/10/2017  10:12:09 - request page /404 not found 
+15/10/2017  10:12:09 - controller file E:\projects\deep_fullstack\pset0\task1/controller/404page.php not exists 
+15/10/2017  10:12:09 - 404 and index 
+15/10/2017  10:12:09 - request page /404 not found 
+15/10/2017  10:12:09 - controller file E:\projects\deep_fullstack\pset0\task1/controller/404page.php not exists 
+15/10/2017  10:12:09 - 404 and index 
+15/10/2017  10:12:09 - request page /404 not found 
+15/10/2017  10:12:09 - controller file E:\projects\deep_fullstack\pset0\task1/controller/404page.php not exists 
+15/10/2017  10:12:09 - 404 and index 
+15/10/2017  10:12:09 - request page /404 not found 
+15/10/2017  10:12:09 - controller file E:\projects\deep_fullstack\pset0\task1/controller/404page.php not exists 
+15/10/2017  10:12:09 - 404 and index 
+15/10/2017  10:12:09 - request page /404 not found 
+15/10/2017  10:12:10 - news and 1 
+15/10/2017  10:12:10 - request page /news/1 not found 
+15/10/2017  10:12:10 - action Controllernewspage->action1 not exists 
+15/10/2017  10:12:10 - 404 and index 
+15/10/2017  10:12:10 - request page /404 not found 
+15/10/2017  10:12:10 - controller file E:\projects\deep_fullstack\pset0\task1/controller/404page.php not exists 
+15/10/2017  10:12:10 - 404 and index 
+15/10/2017  10:12:10 - request page /404 not found 
+15/10/2017  10:12:10 - controller file E:\projects\deep_fullstack\pset0\task1/controller/404page.php not exists 
+15/10/2017  10:12:10 - request page /404 not found 
+15/10/2017  10:12:10 - controller file E:\projects\deep_fullstack\pset0\task1/controller/404page.php not exists 
