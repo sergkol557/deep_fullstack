@@ -2,7 +2,7 @@
 	return [
 		'main' => ['index' => 'index'],
 		'gallery' => ['index' => 'index'],
-		'news/\d+' => ['view' => 'view'],
+		'404' => ['index' => 'index'],
 		'news' => ['list' => 'list',
 					'main' => 'main',
 					'nonmain' => 'nonmain',

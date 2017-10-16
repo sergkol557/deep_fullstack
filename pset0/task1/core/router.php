@@ -61,7 +61,9 @@ class Router
 			die();
 		}
 
-		call_user_func([$pageController, $this->action_name]);
+		if(call_user_func([$pageController, $this->action_name])){
+			logError('user get page'.urldecode($_SERVER['REQUEST_URI']));
+		}
 
 	}
 
