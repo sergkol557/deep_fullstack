@@ -1,10 +1,12 @@
 <?php
 
 
-class MainView{
+class MainView
+{
 
-	public static function generatePage($data):string{
-		return "<p>{$data['text']}</p>";
-	}
+    public static function generatePage($data): string
+    {
+        return "<p>{$data['text']}</p>";
+    }
 
 }

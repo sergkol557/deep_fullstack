@@ -1,7 +1,8 @@
 <?php
 
 
-interface Model {
+interface Model
+{
 
-	public static function getData();
+    public static function getData();
 }

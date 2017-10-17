@@ -1,13 +1,15 @@
 <?php
 
-require_once ROOT.'/core/model.php';
+require_once ROOT . '/core/model.php';
 
-class MainModel implements Model {
+class MainModel implements Model
+{
 
-	public static function getData(){
-		$result = file_get_contents(ROOT.'/data/maindata.json');
-		$result = json_decode($result,true);
-		return $result;
-	}
+    public static function getData()
+    {
+        $result = file_get_contents(ROOT . '/data/maindata.json');
+        $result = json_decode($result, true);
+        return $result;
+    }
 
 }
