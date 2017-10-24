@@ -14,7 +14,7 @@ class NewsModel implements Model
 
     public static function getMainData()
     {
-        $result = NewsModel::getData();
+        $result = self::getData();
         $response = [];
 
         foreach ($result as $key => $value) {

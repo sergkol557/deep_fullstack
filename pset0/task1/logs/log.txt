@@ -1,4 +1,0 @@
-16/10/2017  10:35:52 - request page /1 not found 
-16/10/2017  10:35:52 - controller file E:\projects\deep_fullstack\pset0\task1/controller/1page.php not exists 
-16/10/2017  10:36:02 - request page /1 not found 
-16/10/2017  10:36:02 - controller file E:\projects\deep_fullstack\pset0\task1/controller/1page.php not exists 
