@@ -1,9 +1,10 @@
 <?php
 
-namespace App;
+namespace webapp;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+
 
 class User extends Authenticatable
 {
@@ -15,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'role',
     ];
 
     /**
@@ -29,6 +30,18 @@ class User extends Authenticatable
 
     public function user_forms()
     {
-        return $this->hasOne(UserForm::class);
+        return $this->hasOne(UserForm::class, 'email');
     }
+
+    public function isAdmin()
+    {
+        return $this->role === 'admin';
+    }
+
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+
 }

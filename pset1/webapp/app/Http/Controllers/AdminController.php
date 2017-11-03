@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace webapp\Http\Controllers;
 
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
-    public function home()
+    public function dashboard()
     {
-        return view('admin.home');
+        return view('admin.dashboard');
     }
 }

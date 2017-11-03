@@ -16,7 +16,8 @@ class CreateUserFormsTable extends Migration
         Schema::create('user_forms', function (Blueprint $table) {
             $table->increments('id');
             $table->string('city');
-            $table->string('name');
+            $table->string('country');
+            $table->string('email')->unique();
             $table->timestamps();
         });
     }

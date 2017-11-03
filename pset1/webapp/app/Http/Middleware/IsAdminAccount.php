@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Middleware;
+namespace webapp\Http\Middleware;
 
 use Closure;
 use Illuminate\Contracts\Auth\Guard;
+use Illuminate\Support\Facades\Auth;
 
 class IsAdminAccount
 {
@@ -26,10 +27,10 @@ class IsAdminAccount
 
     public function handle($request, Closure $next)
     {
-        if( ! $this->auth->user()->hasRole(['admin']))
+        if(!Auth::user()->isAdmin())
         {
-            session()->flash('error_msg','This resource is restricted to Administrators!');
-            return redirect()->route('home');
+            session()->flash('status','this resource for admin only');
+            return redirect()->route('welcome');
         }
         return $next($request);
 
