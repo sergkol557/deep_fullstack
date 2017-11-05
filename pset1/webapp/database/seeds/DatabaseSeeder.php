@@ -16,6 +16,9 @@ class DatabaseSeeder extends Seeder
             'email' => 'admin@admin.com',
             'password' => bcrypt('adminadmin'),
             'role' => 'admin',
+            'blocked' => false,
+            'created_at' => '2017-11-03 00:00:00',
+            'updated_at' => '2017-11-03 00:00:00',
         ]);
 
         DB::table('users')->insert([
@@ -23,6 +26,9 @@ class DatabaseSeeder extends Seeder
             'email' => 'user@user.com',
             'password' => bcrypt('useruser'),
             'role' => 'user',
+            'blocked' => false,
+            'created_at' => '2017-11-03 00:00:00',
+            'updated_at' => '2017-11-03 00:00:00',
         ]);
     }
 }

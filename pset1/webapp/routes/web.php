@@ -21,14 +21,15 @@ Auth::routes();
 Route::group(['middleware' => 'auth'], function () {
 
 
-
     Route::group(['middleware' => 'is.admin'], function () {
 
 
         Route::group(['prefix' => 'admin'], function () {
             // mysite.com/admin/dashboard
             Route::get('/home', 'HomeAdminController@home')->name('admin.home');
+            Route::post('/home', 'HomeAdminController@changeUserInfo')->name('post.admin');
             Route::get('/dashboard', 'AdminController@dashboard')->name('admin.dashboard');
+            Route::post('/home', 'HomeAdminController@changeUserInfo')->name('post.admin.dashboard');
 
         });
     });

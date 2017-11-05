@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'role',
+        'name', 'email', 'role',
     ];
 
     /**
@@ -25,7 +25,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+         'password','remember_token',
     ];
 
     public function user_forms()
@@ -43,5 +43,18 @@ class User extends Authenticatable
         return $this->email;
     }
 
+    public static function changeUserData($data)
+    {
+        $form = self::where('id', $data['id'])->first();
+        $form->name = $data['name'];
+        $form->email = $data['email'];
+        $form->role = $data['role'];
+        $form->save();
 
+    }
+
+    public static function isBlocked($id)
+    {
+        return self::where('id', $id)->first()->blocked ?? true;
+    }
 }
