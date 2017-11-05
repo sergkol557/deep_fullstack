@@ -26,4 +26,19 @@ class UserForm extends Model
         $form->save();
     }
 
+    public static function changeUserFormData($data)
+    {
+
+        $form = self::where('id', $data['id'])->first();
+        $form->city = $data['city'];
+        $form->country = $data['country'];
+        $form->save();
+
+    }
+
+    public static function getUserForm($email){
+
+        return self::where('email', $email)->first() ?? '';
+    }
+
 }

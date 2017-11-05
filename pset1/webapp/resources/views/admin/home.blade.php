@@ -1,11 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
+
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
         <div class="panel panel-default">
-          <div class="panel-heading">Welcome,</div>
+          <div class="panel-heading">Welcome, {{Auth::user()->name}}</div>
 
           <div class="panel-body">
             @if (session('status'))
@@ -13,82 +14,46 @@
                 {{ session('status') }}
               </div>
             @endif
-            @foreach($users as $number => $user)
-              {!! Form::open(['url' => ('/admin/home'), 'class' => 'form-horizontal']) !!}
-
-              @foreach($user as $key => $value)
+            @foreach($users as $user)
+                {!! Form::open(['url' => '/admin/home', 'class' => 'form-horizontal']) !!}
                 <div class="form-group">
-                  {!! Form::label($key, $key, ['class' => 'col-md-4 control-label']) !!}
+                  {!! Form::label('id', 'ID', ['class' => 'col-md-4 control-label']) !!}
                   <div class="col-md-6">
-
-                    {!! Form::text($key, $value,['class' => 'form-control text-center', 'class' => 'form-control']) !!}
+                    {!! Form::text('id', $user['id'],['class' =>'form-control', 'required', 'readonly']) !!}
                   </div>
                 </div>
-              @endforeach
-              <div class="form-group">
-                <div class="col-md-6 col-md-offset-4">
-                  {!! Form::submit('update',  ['class' => 'btn btn-primary']); !!}
-                  <button class="btn btn-primary"> block</button>
-                </div>
-              </div>
 
-              {!! Form::close() !!}
-
-                {!! Form::open(['url' => route('/admin/home'), 'class' => 'form-horizontal']) !!}
-
-                <div class="form-group {{ $errors->has('name') ? ' has-error' : '' }}">
+                <div class="form-group">
                   {!! Form::label('name', 'Name', ['class' => 'col-md-4 control-label']) !!}
                   <div class="col-md-6">
-                    {!! Form::text('name', old($user['name']),['class' =>'form-control', 'required', 'autofocus']) !!}
-                    @if ($errors->has('name'))
-                      <span class="help-block">
-                   <strong>{{ $errors->first('name') }}</strong>
-                  </span>
-                    @endif
-                  </div>
-                </div>
-
-                <div class="form-group {{ $errors->has('email') ? ' has-error' : '' }}">
-                  {!! Form::label('email', 'E-Mail Address', ['class' => 'col-md-4 control-label']) !!}
-                  <div class="col-md-6">
-                    {!! Form::email('email', old('email'),['class' =>'form-control', 'required', 'id' =>'email']) !!}
-                    @if ($errors->has('email'))
-                      <span class="help-block">
-                   <strong>{{ $errors->first('email') }}</strong>
-                  </span>
-                    @endif
+                    {!! Form::text('name', $user['name'],['class' =>'form-control', 'required', 'autofocus']) !!}
                   </div>
                 </div>
 
                 <div class="form-group">
-                  {!! Form::label('role', 'Your role', ['class' => 'col-md-4 control-label']) !!}
+                  {!! Form::label('email', 'E-Mail Address', ['class' => 'col-md-4 control-label']) !!}
                   <div class="col-md-6">
-                    {!! Form::select('role', ['user' => 'user', 'admin' => 'admin'], 'user', ['class' =>'form-control']) !!}
+                    {!! Form::email('email', $user['email'],['class' =>'form-control', 'required', 'id' =>'email']) !!}
                   </div>
                 </div>
 
-                <div class="form-group {{ $errors->has('password') ? ' has-error' : '' }}">
-                  {!! Form::label('password', 'Password', ['class' => 'col-md-4 control-label']) !!}
+                <div class="form-group">
+                  {!! Form::label('role', 'Role', ['class' => 'col-md-4 control-label']) !!}
                   <div class="col-md-6">
-                    {!! Form::password('password',['class' =>'form-control', 'required']) !!}
-                    @if ($errors->has('password'))
-                      <span class="help-block">
-                   <strong>{{ $errors->first('password') }}</strong>
-                  </span>
-                    @endif
+                    {!! Form::select('role', ['user' => 'user', 'admin' => 'admin'], $user['role'], ['class' =>'form-control']) !!}
                   </div>
                 </div>
 
-                <div class="form-group {{ $errors->has('password') ? ' has-error' : '' }}">
-                  {!! Form::label('password-confirm', 'Confirm password', ['class' => 'col-md-4 control-label']) !!}
+                <div class="form-group">
+                  {!! Form::label('blocked', 'blocked', ['class' => 'col-md-4 control-label']) !!}
                   <div class="col-md-6">
-                    {!! Form::password('password_confirmation',['class' =>'form-control', 'required', 'id' => 'password-confirm']) !!}
-                  </div>
+                    {!! Form::select('blocked', ['1' => 'true', '0' => 'false'], $user['blocked'], ['class' =>'form-control']) !!}
+                   </div>
                 </div>
 
                 <div class="form-group">
                   <div class="col-md-6 col-md-offset-4">
-                    {!! Form::submit('Register',  ['class' => 'btn btn-primary']); !!}
+                    {!! Form::submit('Update',  ['class' => 'btn btn-primary']); !!}
                   </div>
                 </div>
 

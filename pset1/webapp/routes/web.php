@@ -18,20 +18,19 @@ Route::get('/', function () {
 Auth::routes();
 
 
-Route::group(['middleware' => 'auth'], function () {
+Route::group(['middleware' => ['auth', 'blocked']], function () {
 
 
-    Route::group(['middleware' => 'is.admin'], function () {
+    Route::group(['middleware' => 'is.admin', 'prefix' => 'admin'], function () {
 
 
-        Route::group(['prefix' => 'admin'], function () {
-            // mysite.com/admin/dashboard
-            Route::get('/home', 'HomeAdminController@home')->name('admin.home');
-            Route::post('/home', 'HomeAdminController@changeUserInfo')->name('post.admin');
-            Route::get('/dashboard', 'AdminController@dashboard')->name('admin.dashboard');
-            Route::post('/home', 'HomeAdminController@changeUserInfo')->name('post.admin.dashboard');
+        // mysite.com/admin/dashboard
+        Route::get('/home', 'HomeAdminController@home')->name('admin.home');
+        Route::post('/home', 'HomeAdminController@changeUserInfo')->name('post.admin');
+        Route::get('/dashboard', 'AdminController@dashboard')->name('admin.dashboard');
+        Route::post('/dashboard', 'AdminController@changeUserForms')->name('post.admin.dashboard');
 
-        });
+
     });
 
     Route::get('/home', 'HomeController@index')->name('home');

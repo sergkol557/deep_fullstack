@@ -5,7 +5,7 @@
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
         <div class="panel panel-default">
-          <div class="panel-heading">welcome</div>
+          <div class="panel-heading">Welcome, {{Auth::user()->name}}</div>
 
           <div class="panel-body">
             @if (session('status'))
@@ -18,7 +18,7 @@
             <div class="form-group {{ $errors->has('city') ? ' has-error' : '' }}">
               {!! Form::label('city', 'Your city', ['class' => 'col-md-4 control-label']) !!}
               <div class="col-md-6">
-                {!! Form::text('city', old('city'),['class' =>'form-control', 'required', 'autofocus']) !!}
+                {!! Form::text('city', $data['city'],['class' =>'form-control', 'required', 'autofocus']) !!}
                 @if ($errors->has('city'))
                   <span class="help-block">
                    <strong>{{ $errors->first('city') }}</strong>
@@ -30,7 +30,7 @@
             <div class="form-group {{ $errors->has('country') ? ' has-error' : '' }}">
               {!! Form::label('country', 'Your country', ['class' => 'col-md-4 control-label']) !!}
               <div class="col-md-6">
-                {!! Form::text('country', old('country'),['class' =>'form-control', 'required']) !!}
+                {!! Form::text('country', $data['country'],['class' =>'form-control', 'required']) !!}
                 @if ($errors->has('country'))
                   <span class="help-block">
                    <strong>{{ $errors->first('country') }}</strong>
