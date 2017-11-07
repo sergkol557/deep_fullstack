@@ -20,7 +20,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home', ['data' => UserForm::getUserForm(\Auth::user()->getEmail())]);
+        $data = UserForm::getUserForm(\Auth::user()->getEmail());
+        return view('home', ['data' => $data]);
     }
 
     public function userform(Request $request)
@@ -39,7 +40,7 @@ class HomeController extends Controller
 
         session()->flash('status', 'your data added succesfully');
 
-        return redirect()->route('admin.dashboard');
+        return redirect()->route('home');
     }
 
 }

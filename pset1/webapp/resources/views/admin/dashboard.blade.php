@@ -1,4 +1,3 @@
-
 @extends('layouts.app')
 
 @section('content')
@@ -15,44 +14,46 @@
               </div>
             @endif
 
-              @foreach($userforms as $form)
-                {!! Form::open(['url' => '/admin/dashboard', 'class' => 'form-horizontal']) !!}
-                <div class="form-group">
-                  {!! Form::label('id', 'ID', ['class' => 'col-md-4 control-label']) !!}
-                  <div class="col-md-6">
-                    {!! Form::text('id', $form['id'],['class' =>'form-control', 'required', 'readonly']) !!}
-                  </div>
+            @foreach($userforms as $form)
+              {!! Form::open(['url' => route('delete.admin.dashboard'), 'class' => 'form-horizontal']) !!}
+              <div class="form-group">
+                {!! Form::label('id', 'ID', ['class' => 'col-md-4 control-label']) !!}
+                <div class="col-md-6">
+                  {!! Form::text('id', $form['id'],['class' =>'form-control', 'required', 'readonly']) !!}
                 </div>
+              </div>
 
-                <div class="form-group">
-                  {!! Form::label('email', ' user E-Mail Address', ['class' => 'col-md-4 control-label']) !!}
-                  <div class="col-md-6">
-                    {!! Form::email('email', $form['email'],['class' =>'form-control', 'required', 'readonly']) !!}
-                   </div>
+              <div class="form-group">
+                {!! Form::label('email', ' user E-Mail Address', ['class' => 'col-md-4 control-label']) !!}
+                <div class="col-md-6">
+                  {!! Form::email('email', $form['email'],['class' =>'form-control', 'required', 'readonly']) !!}
                 </div>
+              </div>
 
-                <div class="form-group">
-                  {!! Form::label('city', 'City', ['class' => 'col-md-4 control-label']) !!}
-                  <div class="col-md-6">
-                    {!! Form::text('city', $form['city'],['class' =>'form-control', 'required', 'autofocus']) !!}
-                  </div>
+              <div class="form-group">
+                {!! Form::label('city', 'City', ['class' => 'col-md-4 control-label']) !!}
+                <div class="col-md-6">
+                  {!! Form::text('city', $form['city'],['class' =>'form-control', 'required', 'autofocus']) !!}
                 </div>
-                <div class="form-group">
-                  {!! Form::label('country', 'Country', ['class' => 'col-md-4 control-label']) !!}
-                  <div class="col-md-6">
-                    {!! Form::text('country', $form['country'],['class' =>'form-control', 'required', 'autofocus']) !!}
-                  </div>
+              </div>
+              <div class="form-group">
+                {!! Form::label('country', 'Country', ['class' => 'col-md-4 control-label']) !!}
+                <div class="col-md-6">
+                  {!! Form::text('country', $form['country'],['class' =>'form-control', 'required', 'autofocus']) !!}
                 </div>
+              </div>
 
-                <div class="form-group">
-                  <div class="col-md-6 col-md-offset-4">
-                    {!! Form::submit('Update',  ['class' => 'btn btn-primary']); !!}
-                  </div>
+              <div class="form-group">
+                <div class="col-md-6 col-md-offset-4">
+                  {!! Form::submit('Update',  ['class' => 'btn btn-primary']); !!}
+                  {!! Form::submit('Delete',  ['class' => 'btn btn-danger', 'form' => 'form'.$form['id']]) !!}
                 </div>
-
-
-                {!! Form::close() !!}
-              @endforeach
+              </div>
+              {!! Form::close() !!}
+              {!! Form::open(['url' => route('delete.admin.dashboard'), 'method' => 'delete', 'id' => 'form'.$form['id']]) !!}
+              {!! Form::hidden('id', $form['id']) !!}
+              {!! Form::close() !!}
+            @endforeach
           </div>
         </div>
       </div>

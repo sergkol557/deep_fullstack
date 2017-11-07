@@ -24,4 +24,12 @@ class AdminController extends Controller
         return redirect()->route('admin.dashboard');
 
     }
+
+    public function delete(Request $request)
+    {
+        UserForm::deleteUserForm($request->id);
+        session()->flash('status','data deleted succefully');
+
+        return redirect()->route('admin.dashboard');
+    }
 }

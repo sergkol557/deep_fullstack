@@ -38,7 +38,11 @@ class UserForm extends Model
 
     public static function getUserForm($email){
 
-        return self::where('email', $email)->first() ?? '';
+        return self::where('email', $email)->first() ?? ['city' => '', 'country' => ''];
     }
 
+    public static  function deleteUserForm ($id)
+    {
+        self::where('id', $id)->delete();
+    }
 }

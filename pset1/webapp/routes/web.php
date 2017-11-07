@@ -29,7 +29,7 @@ Route::group(['middleware' => ['auth', 'blocked']], function () {
         Route::post('/home', 'HomeAdminController@changeUserInfo')->name('post.admin');
         Route::get('/dashboard', 'AdminController@dashboard')->name('admin.dashboard');
         Route::post('/dashboard', 'AdminController@changeUserForms')->name('post.admin.dashboard');
-
+        Route::delete('dashboard', 'AdminController@delete')->name('delete.admin.dashboard');
 
     });
 
